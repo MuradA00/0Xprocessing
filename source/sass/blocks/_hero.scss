@@ -1,0 +1,96 @@
+.hero {
+  &__container {
+    height: 60vh;
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__body {
+    max-width: 65.25rem;
+    margin-inline: auto;
+    width: 100%;
+    &::before {
+      @include psevdo;
+      width: clamp(30rem, 44.1875vw, 44.1875rem);
+      height: clamp(30rem, 40.75vw, 40.75rem);
+      background-image: url('../../img/sprite/hero-element.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top;
+      z-index: -1;
+      top: 39%;
+      left: 50%;
+      transform: translate(-44%, -50%);
+    }
+  }
+  &__heading-top {
+    flex: 1 1 calc(100% - (26.0625rem + 1.75rem));
+  }
+  &__heading-text {
+    font-size: clamp(3rem, 6.75vw, 6.75rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 110%;
+  }
+  .heading-regular {
+    font-family: var(--sec-ff);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .heading-bold {
+    text-align: right;
+    padding-right: 28px;
+  }
+  &__bottom-text {
+    text-align: center;
+  }
+  &__heading {
+    @include al-flex;
+    justify-content: space-between;
+  }
+  .block-hero {
+    border: 2px solid var(--white-clr);
+    padding: clamp(.8rem, 2vw, var(--32-spacing));
+    border-radius: 1.25rem;
+    &__heading {
+      font-size: .875rem;
+      font-weight: 700;
+      line-height: 125%;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #FFC266;
+    }
+    &__inner-text {
+      span {
+        font-weight: 5400;
+        font-size: 1.5rem;
+        line-height: 150%;
+      }
+    }
+  }
+  &__btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2.875rem;
+  }
+  &__request {
+    max-width: 14.0625rem;
+    border-radius: 20px;
+    margin-right: clamp(4.25rem, 8vw, 8.375rem);
+  }
+  &__info {
+    padding-top: clamp(2.5rem, 5.4375vw, 5.4375rem);
+    @include al-flex;
+    width: 100%;
+    justify-content: center;
+    grid-gap: 24px;
+  }
+  &__info-text {
+    max-width: 33.125rem;
+    font-size: clamp(1.25rem, 1.75vw, 1.75rem);
+  }
+}

@@ -1,0 +1,55 @@
+:root {
+  --pimary-ff: 'Euclid Square', sans-serif;
+  --sec-ff: 'Euclid Flex', sans-serif;
+  // ! -- Colors -- ! //
+  --black-clr: #191A1F;
+  --grey-clr: #7E8088;
+  --white-clr: #FFFFFF;
+  --btn-clr: linear-gradient(94.17deg, #E8C24F -53.08%, #DD475E 118.19%),
+  radial-gradient(105.03% 92.27% at 97.99% 8.62%, #EB5323 0%, #811C5E 80.59%, #300947 100%);
+  -yellow-clr: linear-gradient(0deg, #FFC266, #FFC266),
+  linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  --border-gradient: linear-gradient(93.73deg, #E8B24F 2.04%, #DD475E 89.47%);
+  --yellow-border: linear-gradient(0deg, #FFC266, #FFC266),
+  linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  --yellow-clr: linear-gradient(0deg, #FFC266, #FFC266), #FFFFFF;
+  // ! -- Spacing -- ! //
+  --12-spacing: 0.75rem;
+  --16-spacing: 1rem;
+  --20-spacing: 1.25rem;
+  --24-spacing: 1.5rem;
+  --32-spacing: 2rem;
+  --40-spacing: 2.5rem;
+  --80-spacing: 5rem;
+  --100-spacing: 6.25rem;
+  --160-spacing: 10rem;
+  --cont-spacing: 0px clamp(0.781rem, 0.9375vw, 1.25rem);
+}
+
+._container {
+  padding: var(--cont-spacing);
+  max-width: 75.125rem;
+  margin-inline: auto;
+  width: 100%;
+}
+
+._default-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--12-spacing) 1.75rem 1rem;
+  width: 100%;
+  font-size: clamp(1.1rem, 1.5vw, var(--24-spacing));
+  font-weight: 400;
+  background-image: var(--btn-clr);
+  border-radius: 10px;
+  color: var(--white-clr);
+}
+
+
+
+
+
+
+
