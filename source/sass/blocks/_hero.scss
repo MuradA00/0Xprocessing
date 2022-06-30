@@ -1,4 +1,6 @@
 .hero {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   &__container {
     min-height: 100%;
     position: relative;
@@ -7,7 +9,6 @@
     justify-content: center;
   }
   &__body {
-    padding-top: clamp(5rem, 8.4375vw, 8.4375rem);
     max-width: 65.25rem;
     margin-inline: auto;
     width: 100%;
@@ -20,7 +21,7 @@
       background-repeat: no-repeat;
       background-position: top;
       z-index: -1;
-      top: calc(39% + clamp(2rem, 4vw, 4rem));
+      top: 39%;
       left: 50%;
       transform: translate(-44%, -50%);
     }
