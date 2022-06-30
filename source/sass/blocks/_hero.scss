@@ -1,7 +1,7 @@
 .hero {
-  min-height: 100vh;
-  height: 100%;
+  height: calc(100vh - 9.4rem);
   min-height: -webkit-fill-available;
+  padding-top: 4rem;
   &__container {
     min-height: 100%;
     position: relative;
@@ -10,6 +10,7 @@
     justify-content: center;
   }
   &__body {
+
     max-width: 65.25rem;
     margin-inline: auto;
     width: 100%;
