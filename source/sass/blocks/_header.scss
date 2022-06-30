@@ -1,5 +1,5 @@
 .header {
-  padding: clamp(1.5rem, 2.5vw, var(--40-spacing)) 0;
+  padding-top: clamp(1.5rem, 2.5vw, var(--40-spacing));
   &__body,
   &__left {
     @include al-flex;
