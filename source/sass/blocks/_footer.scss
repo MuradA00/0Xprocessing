@@ -1,0 +1,89 @@
+.footer {
+  background-color: var(--white-clr);
+  &__body {
+    padding: clamp(var(--40-spacing), 5vw, var(--80-spacing)) 0px;
+    color: var(--black-clr);
+  }
+  &__heading {
+    font-weight: 700;
+    font-size: clamp(2rem, 3.25vw, 3.25rem);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__inner {
+    padding-top: 1.75rem;
+    display: grid;
+    grid-template-columns: .735fr .48fr;
+    grid-gap: var(--24-spacing);
+    @include max-w(43.75rem) {
+      grid-template-columns: 100%;
+    }
+  }
+  &__social {
+    @include max-w(43.75rem) {
+      padding-top: 3.5rem;
+    }
+  }
+  &__social-heading {
+    font-size: clamp(1.2rem, 1.25vw, 1.25rem);
+    font-weight: 400;
+  }
+  .social-footer {
+    padding-top: 12px;
+    @include al-flex;
+    grid-gap: var(--24-spacing);
+    flex-wrap: wrap;
+  }
+  &__info-text {
+    max-width: 40.3125rem;
+    p {
+      font-size: clamp(1.15rem, 1.25vw, 1.25rem);
+      font-weight: 400;
+    }
+  }
+}
+
+.form {
+  &__inputs-item {
+
+    border-bottom: 1px solid #E1E1E1;
+  }
+  &__input {
+    background-color: transparent;
+    padding: 1rem 0;
+    border: none;
+    font-size: clamp(1.125rem, 1.25vw, 1.25rem);
+    &::placeholder {
+      color: var(--black-clr);
+    }
+  }
+  &__send {
+    padding-top: 28px;
+  }
+  &__btn {
+
+    max-width: 14.0625rem;
+  }
+}
+
+
+.footer-small {
+  &__social {
+    padding-top: 0;
+  }
+}
+
+@include max-w(29rem) {
+  .footer {
+  }
+  .social-footer {
+    &__item {
+      width: 2.5rem;
+    }
+  }
+}

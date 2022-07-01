@@ -1,0 +1,44 @@
+.support {
+  padding-top: clamp(5rem, 10vw, 10rem);
+  &__title {
+    span {
+      padding-left: 12.75vw;
+    }
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: 0.706fr .463fr;
+    grid-gap: 27px;
+    padding-top: clamp(2rem, 2.5vw, var(--40-spacing));
+  }
+  ol {
+    padding: 0;
+    margin: 0;
+  }
+  .support-list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+    &__item {
+      padding: .75rem;
+      font-size: clamp(1.125rem, 1.375vw, 1.375rem);
+
+    }
+  }
+
+}
+
+@include max-w(53.125rem) {
+  .support {
+    &__inner {
+      grid-template-columns: 100%;
+    }
+    &__image {
+     width: 100%;
+     picture,
+     img {
+      width: 100%;
+     }
+    }
+  }
+}

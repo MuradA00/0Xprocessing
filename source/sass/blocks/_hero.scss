@@ -95,3 +95,13 @@
     font-size: clamp(1.25rem, 1.75vw, 1.75rem);
   }
 }
+
+@media only screen and (max-height: 48rem) {
+  .hero {
+    &__body {
+      &::before {
+        height: clamp(27rem, 35.75vw, 35.75rem);
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.contact {
+  overflow: hidden;
+  padding: clamp(3.5rem, 5.25vw, 5.25rem) 0 clamp(4.5rem, 8.125vw, 8.125rem);
+  position: relative;
+  &::before {
+    @include psevdo;
+    right: -58%;
+    top: 30%;
+    width: clamp(20rem, 68.1875vw, 68.1875rem);
+    height: clamp(35rem, 55.75vw, 55.75rem);
+    background-image: url('../../img/sprite/pseudo-contact.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    @include max-w(26.25rem) {
+      right: -70%;
+    }
+  }
+  &::after {
+    @include psevdo;
+    top: -27%;
+    width: clamp(10rem, 68.1875vw, 68.1875rem);
+    height: clamp(20rem, 55.75vw, 55.75rem);
+    background-image: url('../../img/sprite/contact-blured.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    left: -45%;
+
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: 0.325fr 0.39fr;
+    justify-content: space-between;
+    padding-top: clamp(4.5rem, 7.5vw, 7.5rem);
+  }
+  &__heading {
+    @include al-flex;
+    grid-gap: 1rem;
+    span {
+      font-size: clamp(1.125rem, 1.375vw, 1.375rem);
+      color: var(--grey-clr);
+    }
+  }
+  &__title {
+    padding-top: clamp(2.5rem, 5vw, var(--80-spacing));
+  }
+  &__subtitle {
+    padding-top: 1.75rem;
+    max-width: 70rem;
+    font-size: 1.375rem;
+  }
+  &__text-inner {
+    font-size: clamp(1.125rem, 1.375vw, 1.375rem);
+    &:not(:first-child) {
+      padding-top: clamp(1.5rem, 2.1875vw, 2.1875rem);
+    }
+  }
+  .form {
+    &__inputs {
+      display: grid;
+      grid-gap: 12px;
+    }
+    &__inputs-item {
+      border-bottom: 1px solid #433F49;
+    }
+    &__input {
+      padding: 1rem 1.875rem 1rem;
+      background: #262429;
+      color: var(--white-clr);
+      &::placeholder {
+        color: var(--grey-clr);
+      }
+    }
+  }
+  &__text-block {
+    padding-top: clamp(4.5rem, 7.5vw, 7.5rem);
+  }
+}
+
+
+.links-list {
+  display: grid;
+  grid-gap: 28px;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 130%;
+    a {
+      background: var(--yellow-clr);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@include max-w(46.875rem) {
+  .contact__inner {
+    grid-template-columns: 100%;
+    grid-gap: 3rem;
+  }
+}
+
+@include max-w(28.125rem) {
+  .contact {
+    .form {
+      &__btn {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
   // ! -- Colors -- ! //
   --black-clr: #191A1F;
   --grey-clr: #7E8088;
+  --grey-light-clr: #97959B;
   --white-clr: #FFFFFF;
   --btn-clr: linear-gradient(94.17deg, #E8C24F -53.08%, #DD475E 118.19%),
   radial-gradient(105.03% 92.27% at 97.99% 8.62%, #EB5323 0%, #811C5E 80.59%, #300947 100%);
@@ -28,7 +29,7 @@
 
 ._container {
   padding: var(--cont-spacing);
-  max-width: 75.125rem;
+  max-width: 77.225rem;
   margin-inline: auto;
   width: 100%;
 }
@@ -43,13 +44,37 @@
   font-size: clamp(1.1rem, 1.5vw, var(--24-spacing));
   font-weight: 400;
   background-image: var(--btn-clr);
-  border-radius: 10px;
+  border-radius: 20px;
   color: var(--white-clr);
+  box-shadow: 3px -3px 17px 0px rgba(193, 62, 54, 0.45) inset;
+
 }
 
+._default-title {
+  font-weight: 700;
+  font-family: var(--sec-ff);
+  font-size: clamp(2.5rem, 3.25vw, 3.25rem);
+  letter-spacing: 0.06em;
+  line-height: 120%;
+  text-transform: uppercase;
+}
 
+._med-title {
+  font-size: clamp(2.25rem, 2.625vw, 2.625rem);
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  line-height: 120%;
+}
 
+._small-title {
+  font-weight: 700;
+  font-size: clamp(1.75rem, 2vw, 2rem);
+  font-family: var(--sec-ff);
+}
 
+.--120-spacing {
+  padding-top: clamp(5rem, 7.5vw, 7.5rem);
+}
 
 
 
