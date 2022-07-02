@@ -1,0 +1,51 @@
+.tools {
+  &__inner {
+    padding-top: clamp(2.8rem, 3.75vw, 3.75rem);
+    display: grid;
+    grid-template-columns: 0.57fr .588fr;
+    grid-gap: 24px;
+  }
+  &__heading {
+    font-size: clamp(1.45rem, 1.625vw, 1.625rem);
+    font-weight: 700;
+  }
+  &__descr {
+    min-height: 11.25rem;
+    margin-top: 28px;
+    p {
+      font-size: clamp(1.125rem, 1.25vw, 1.25rem);
+    }
+  }
+  &__subinfo {
+    padding-top: 8px;
+    display: flex;
+    grid-gap: clamp(1.5rem, 2.0625vw, 33px);
+    span {
+      margin-top: 8px;
+      display: block;
+      width: 27px;
+      height: 7px;
+      background: var(--yellow-clr);
+    }
+    p {
+      font-size: clamp(1.125rem, 1.25vw, 1.25rem);
+      color: #97959B;
+    }
+  }
+}
+
+@include max-w(51.25rem) {
+  .tools {
+    &__inner {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &__image {
+      width: 100%;
+      picture,
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

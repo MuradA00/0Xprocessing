@@ -32,8 +32,8 @@
     font-weight: 700;
   }
   &__item-hidden {
-    // max-height: 0;
-    // opacity: 0;
+    max-height: 0;
+    opacity: 0;
     transition: all .2s ease-in-out;
     cursor: default;
   }
@@ -272,6 +272,7 @@
     grid-gap: 3rem;
   }
   .instruction {
+    padding-bottom: 6rem;
     &__arrow {
       transform: rotate(90deg);
       &::after {
@@ -315,5 +316,6 @@
   .arrow-abs {
     display: none;
   }
+
 }
 
