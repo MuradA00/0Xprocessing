@@ -1,0 +1,59 @@
+.fees {
+  &__inner {
+    padding-top: clamp(3.5rem, 5vw, 5rem);
+    display: grid;
+    grid-template-columns: 0.42fr .5fr;
+    justify-content: space-between;
+  }
+  &__info {
+    display: grid;
+    grid-gap: 28px;
+  }
+  &__title {
+    span {
+      font-style: italic;
+      font-family: var(--sec-ff);
+      font-weight: 400;
+    }
+  }
+  &__descr {
+    p {
+      font-size: clamp(1.125rem, 1.25vw, 1.25rem);
+      line-height: 127%;
+    }
+  }
+  &__subinfo {
+    @include al-flex;
+    grid-gap: .875rem;
+    span {
+      color: #97959B;
+      font-size: clamp(1rem, 1.125vw, 1.125rem);
+    }
+  }
+  &__image {
+
+  }
+}
+
+
+@include max-w(59.375rem) {
+  .fees {
+    &__inner {
+      display: flex;
+      flex-direction: column-reverse;
+      grid-gap: 2rem;
+    }
+    &__info {
+      text-align: center;
+    }
+    &__subinfo {
+      justify-content: center;
+    }
+    &__image {
+      width: 100%;
+      picture, img {
+        width: 100%;
+      }
+    }
+  }
+}

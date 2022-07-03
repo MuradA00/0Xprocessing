@@ -1,5 +1,8 @@
 .media {
   padding: clamp(5rem, 10vw, 10rem) 0;
+  &__row {
+    animation: fadeEffect 1s;
+  }
   &__heading {
     padding-top: 28px;
     @include al-flex;
@@ -49,7 +52,6 @@
   li {
     cursor: pointer;
   }
-  }
   span {
     border-radius: 50%;
     width: 11px;
@@ -57,9 +59,18 @@
     display: block;
     background-color: var(--white-clr);
   }
-
+  }
 }
 
 .active-bullet {
   background-color: #FFC266 !important;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {opacity: 1;
+  transform: translateY(0);}
 }

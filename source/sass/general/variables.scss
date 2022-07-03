@@ -53,14 +53,14 @@
 ._default-title {
   font-weight: 700;
   font-family: var(--sec-ff);
-  font-size: clamp(2.5rem, 3.25vw, 3.25rem);
+  font-size: clamp(2.3rem, 3.25vw, 3.25rem);
   letter-spacing: 0.06em;
   line-height: 120%;
   text-transform: uppercase;
 }
 
 ._med-title {
-  font-size: clamp(2.25rem, 2.625vw, 2.625rem);
+  font-size: clamp(2.25rem, 2.625vw, 2.625rem) !important ;
   letter-spacing: 0.06em;
   font-weight: 700;
   line-height: 120%;

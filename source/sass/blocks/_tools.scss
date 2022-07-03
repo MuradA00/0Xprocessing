@@ -4,7 +4,24 @@
     display: grid;
     grid-template-columns: 0.57fr .588fr;
     grid-gap: 24px;
+    @keyframes fadeEffect {
+      from {
+        opacity: 0;
+        transform: translateY(10%);
+      }
+      to {opacity: 1;
+      transform: translateY(0);}
+    }
+
   }
+  &__wrapper {
+    padding-top: clamp(3rem, 5vw, 5rem);
+  }
+  #exchange,
+  #solutions {
+    display: none;
+  }
+
   &__heading {
     font-size: clamp(1.45rem, 1.625vw, 1.625rem);
     font-weight: 700;
@@ -37,7 +54,7 @@
 @include max-w(51.25rem) {
   .tools {
     &__inner {
-      display: flex;
+      display: flex !important;
       flex-direction: column-reverse;
     }
     &__image {
@@ -47,5 +64,54 @@
         width: 100%;
       }
     }
+  }
+}
+
+.panel__btn-row {
+  @include al-flex;
+  grid-gap: clamp(1.5rem, 2.8125vw, 2.8125rem);
+  margin-top: 2.5rem;
+}
+
+.panel__btn {
+  justify-content: center;
+  text-align: center;
+  @include al-flex;
+  grid-gap: 24px;
+  font-size: clamp(1.125rem, 1.25vw, 1.25rem);
+  padding: 16px 32px 18px 32px;
+  border-radius: 28px;
+  position: relative;
+  transition: .3s ease-in-out;
+  &::after {
+    position: relative;
+    content:  url('../../img/sprite/arrow-down-black.svg');
+    width: 15px;
+    height: 17.6px;
+    display: none;
+    transition: .3s ease-in-out;
+  }
+  &:nth-child(1) {
+    background: var(--yellow-clr);
+  }
+  &:nth-child(2) {
+    color: var(--white-clr);
+    outline: 2px solid rgba(67, 63, 73, 1);
+  }
+  &:nth-child(3) {
+    color: var(--white-clr);
+    outline: 2px solid rgba(67, 63, 73, 1);
+  }
+}
+
+.active-panel-btn {
+  background: var(--yellow-clr);
+  color: var(--black-clr) !important;
+  outline: none !important;
+  svg {
+    display: none;
+  }
+  &::after {
+    display: block;
   }
 }

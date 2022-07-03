@@ -1,0 +1,70 @@
+.incoming {
+  padding: clamp(4.5rem, 7.5vw, 7.5rem) 0;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20.625rem, 1fr));
+    grid-gap: clamp(4rem, 6.525vw, 6.525rem);
+    padding-top: 2.5rem;
+  }
+  &__item {
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon {
+    margin: 0 auto;
+    width: 8.75rem;
+    height: 8.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border: 2px solid transparent;
+    background-color: #191a1f;
+    background-clip: padding-box;
+    border-radius: 3.5rem;
+    align-items: center;
+    &::before {
+      @include psevdo;
+      border-radius: inherit;
+      inset: 0;
+      z-index: -1;
+      transition: opacity .25s ease-in-out;
+      margin: -2px;
+      opacity: 0;
+      background: linear-gradient(93.73deg,#E8B24F 2.04%,#DD475E 89.47%);
+    }
+    &::after {
+      @include psevdo;
+      border-radius: inherit;
+      inset: 0;
+      z-index: -1;
+      transition: opacity .25s ease-in-out;
+      margin: -1px;
+      opacity: 1;
+      background-color: #433F49;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+  &__heading {
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.125rem;
+    span {
+      font-weight: 700;
+    }
+  }
+  &__total {
+    padding-top: 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    @include al-flex;
+    grid-gap: 15px;
+    justify-content: center;
+  }
+}

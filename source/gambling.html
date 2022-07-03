@@ -9,7 +9,7 @@
 
   <section class="tools business">
     <div class="tools__container _container">
-      <div class="tools__body ">
+      <div class="tools__body">
         <div class="business__heading contact__heading">
           <span>Home</span>
           <svg width="12" height="14.11">
@@ -19,7 +19,39 @@
             Tools
           </span>
       </div>
-      <div class="tools__inner">
+        <div class="tools__wrapper">
+                <h7 class="tools__title _med-title">Tools</h7>
+      <div class="tools__panel">
+        <div class="panel__inner">
+          <div class="panel__btn-row">
+            <button class="panel__btn" onclick="showDisplay(event, 'invoice')">
+              <span>
+                Invoices
+              </span>
+              <svg width="15" height="17.6">
+                <use href="img/sprite/sprite.svg#arrow-down-black"></use>
+              </svg>
+            </button>
+            <button class="panel__btn" onclick="showDisplay(event, 'exchange')">
+              <span>
+                Exchange
+              </span>
+              <svg width="15" height="17.6">
+                <use href="img/sprite/sprite.svg#arrow-down"></use>
+              </svg>
+            </button>
+            <button class="panel__btn" onclick="showDisplay(event, 'solutions')">
+              <span>
+                Turnkey Solutions
+              </span>
+              <svg width="15" height="17.6">
+                <use href="img/sprite/sprite.svg#arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="tools__inner" id="invoice">
         <div class="tools__info">
           <div class="tools__heading">
             Invoices
@@ -45,6 +77,59 @@
           </picture>
         </div>
       </div>
+      <div class="tools__inner" id="exchange">
+        <div class="tools__info">
+          <div class="tools__heading">
+            Exchange
+          </div>
+          <div class="tools__descr">
+            <p>
+              Exchange – a method of bill generation where a given cryptocurrency is tied to a specific fiat amount, which the customer has to pay within a short period of time (15 minutes), after which the invoice has to be regenerated with the new exchange rate.
+            </p>
+          </div>
+          <div class="tools__subinfo">
+            <span>
+
+            </span>
+            <p>
+              A flexible tool that allows your customers to pay in crypto and credits your account with the required amount in EUR or other currency.
+            </p>
+          </div>
+        </div>
+        <div class="tools__image">
+          <picture>
+            <source type='image/webp' srcset='img/gambling/gam-image.webp'>
+            <img src='img/gambling/gam-image.png' alt=''>
+          </picture>
+        </div>
+      </div>
+      <div class="tools__inner" id="solutions">
+        <div class="tools__info">
+          <div class="tools__heading">
+            Turnkey Solutions
+          </div>
+          <div class="tools__descr">
+            <p>
+              Solutions – a method of bill generation where a given cryptocurrency is tied to a specific fiat amount, which the customer has to pay within a short period of time (15 minutes), after which the invoice has to be regenerated with the new exchange rate.
+            </p>
+          </div>
+          <div class="tools__subinfo">
+            <span>
+
+            </span>
+            <p>
+              A flexible tool that allows your customers to pay in crypto and credits your account with the required amount in EUR or other currency.
+            </p>
+          </div>
+        </div>
+        <div class="tools__image">
+          <picture>
+            <source type='image/webp' srcset='img/gambling/gam-image.webp'>
+            <img src='img/gambling/gam-image.png' alt=''>
+          </picture>
+        </div>
+      </div>
+        </div>
       </div>
     </div>
   </section>
@@ -64,18 +149,116 @@
             <div class="choose-row">
               <ul class="choose-list">
                 <li>
-                  <span class="active-bullet"></span>
+                  <span class="bullet active-bullet" onclick="showRow(event, 'first-row')"></span>
                 </li>
                 <li>
-                  <span></span>
+                  <span class="bullet" onclick="showRow(event, 'sec-row')"></span>
                 </li>
                 <li>
-                  <span></span>
+                  <span class="bullet" onclick="showRow(event, 'third-row')"></span>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="media__row">
+          <div class="media__row" id="first-row">
+            <ul class="media-row">
+              <li class="media-row__item">
+                <div class="media-row__inner">
+                  <div class="media-row__heading">
+                    Why crypto Processing systems is the Future
+                  </div>
+                  <div class="media-row__date">
+                    December 11, 2019
+                  </div>
+                  <div class="media-row__icon">
+                    <svg width="106" height="106">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li class="media-row__item">
+                <div class="media-row__inner">
+                  <div class="media-row__heading">
+                    Why crypto Processing systems is the Future
+                  </div>
+                  <div class="media-row__date">
+                    December 11, 2019
+                  </div>
+                  <div class="media-row__icon">
+                    <svg width="106" height="106">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li class="media-row__item">
+                <div class="media-row__inner">
+                  <div class="media-row__heading">
+                    Why crypto Processing systems is the Future
+                  </div>
+                  <div class="media-row__date">
+                    December 11, 2019
+                  </div>
+                  <div class="media-row__icon">
+                    <svg width="106" height="106">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="media__row" id="sec-row" style="display: none;">
+            <ul class="media-row">
+              <li class="media-row__item">
+                <div class="media-row__inner">
+                  <div class="media-row__heading">
+                    Why crypto Processing systems is the Future
+                  </div>
+                  <div class="media-row__date">
+                    December 11, 2019
+                  </div>
+                  <div class="media-row__icon">
+                    <svg width="106" height="106">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li class="media-row__item">
+                <div class="media-row__inner">
+                  <div class="media-row__heading">
+                    Why crypto Processing systems is the Future
+                  </div>
+                  <div class="media-row__date">
+                    December 11, 2019
+                  </div>
+                  <div class="media-row__icon">
+                    <svg width="106" height="106">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li class="media-row__item">
+                <div class="media-row__inner">
+                  <div class="media-row__heading">
+                    Why crypto Processing systems is the Future
+                  </div>
+                  <div class="media-row__date">
+                    December 11, 2019
+                  </div>
+                  <div class="media-row__icon">
+                    <svg width="106" height="106">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="media__row" id="third-row" style="display: none;">
             <ul class="media-row">
               <li class="media-row__item">
                 <div class="media-row__inner">
@@ -135,6 +318,7 @@
 
 
   @@include('_footer.html',{})
+  <script src="js/tabs.js"></script>
   <script src="js/accord.js"></script>
   <script src="js/common.js"></script>
 </body>

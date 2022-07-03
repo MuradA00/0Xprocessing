@@ -1,0 +1,53 @@
+.about-fees {
+  &__body {
+    position: relative;
+    background-clip: padding-box;
+    background-color: var(--black-clr);
+    border: 2px solid transparent;
+    border-radius: 32px;
+    padding: 1.5rem clamp(1rem, 2vw, 2rem);
+    &::after {
+      position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    content: "";
+    z-index: -1;
+    border-radius: 32px;
+    background: linear-gradient(91.27deg, #DD475E 4.41%, #6D1576 91.09%),
+    linear-gradient(0deg, #DD475E, #DD475E);
+    }
+  }
+  &__inner {
+    @include al-flex;
+    justify-content: space-between;
+    grid-gap: 24px;
+    span {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+  &__descr {
+    p {
+      color: #97959B;
+      font-size: 1.125rem;
+    }
+  }
+  &__name {
+    white-space: nowrap;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 700;
+  }
+}
+
+@include max-w(48.75rem) {
+  .about-fees {
+    &__inner {
+      flex-direction: column;
+      span {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
