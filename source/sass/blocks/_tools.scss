@@ -51,6 +51,20 @@
   }
 }
 
+.panel {
+  &__inner {
+    @include al-flex;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+    grid-gap: 2rem;
+    flex-wrap: wrap;
+    @include max-w(43.75rem) {
+      grid-gap: 3rem;
+      justify-content: center;
+    }
+  }
+}
+
 @include max-w(51.25rem) {
   .tools {
     &__inner {
@@ -70,7 +84,8 @@
 .panel__btn-row {
   @include al-flex;
   grid-gap: clamp(1.5rem, 2.8125vw, 2.8125rem);
-  margin-top: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .panel__btn {
@@ -78,7 +93,7 @@
   text-align: center;
   @include al-flex;
   grid-gap: 24px;
-  font-size: clamp(1.125rem, 1.25vw, 1.25rem);
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
   padding: 16px 32px 18px 32px;
   border-radius: 28px;
   position: relative;

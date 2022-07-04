@@ -1,0 +1,137 @@
+.nav-menu {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black-clr);
+  z-index: 999;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform .4s ease;
+  &__heading {
+    @include al-flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+  }
+  &__inner {
+    height: 100%;
+
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__menu {
+    padding: 2rem 1rem;
+  }
+  .mob-menu {
+    display: grid;
+    grid-gap: 1rem;
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
+  &__logo {
+    width: 150px;
+  }
+
+  &__footer {
+    margin-top: 3rem;
+    background-color: var(--white-clr);
+    padding: 1rem 2rem;
+    margin: 0rem 0rem 4.8rem 0;
+    .social-footer {
+      @include al-flex;
+      grid-gap: .9rem;
+      flex-wrap: wrap;
+      // justify-content: center;
+      &__link {
+        width: 30px;
+      }
+    }
+  }
+  .mob-footer {
+    &__heading {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: var(--black-clr);
+    }
+  }
+  &__close-icon {
+    span {
+      display: block;
+      width: 1.5rem;
+      height: 3px;
+      background-color: var(--white-clr);
+      border-radius: 5px;
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -3px;
+      }
+    }
+  }
+}
+
+.--open-menu {
+  transform: translateX(0) !important;
+}
+
+.--body-locked {
+  overflow: hidden;
+}
+
+@media only screen and (max-height: 38.125rem) {
+  .nav-menu {
+    &__inner {
+      overflow-y: auto;
+    }
+    &__footer {
+      margin: 0rem;
+    }
+
+  }
+}
+
+
+@include max-w(50rem) {
+  .hedging {
+    overflow: hidden;
+    &__total {
+      max-width: 29.375rem;
+      margin: 0 auto;
+    }
+    .total-block {
+      &__inner {
+        flex-direction: column;
+      }
+      &__arrow {
+        transform: rotate(90deg);
+      }
+    }
+    &__inner {
+      margin-top: 7rem;
+      display: flex;
+      flex-direction: column;
+    }
+    &__tree {
+      transform: rotate(90deg);
+      max-width: 35rem;
+      min-height: 30rem;
+      height: 100%;
+      margin: 0 auto;
+      picture {
+        min-width: 30rem;
+      }
+    }
+  }
+}
+
+@include max-w(38.75rem) {
+
+}

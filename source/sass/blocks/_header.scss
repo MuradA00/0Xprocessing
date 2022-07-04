@@ -1,5 +1,15 @@
 .header {
   padding-top: clamp(1.5rem, 2.5vw, var(--40-spacing));
+  &__menu {
+    display: none;
+    grid-gap: 7px;
+    span {
+      width: 2rem;
+      height: 3px;
+      background-color: var(--white-clr);
+
+    }
+  }
   &__body,
   &__left {
     @include al-flex;
@@ -112,5 +122,12 @@
     .nav {
       display: none;
     }
+    &__menu {
+      display: grid;
+    }
+    &__lang-menu {
+      padding: 0px 0px .3rem 0px;
+    }
   }
 }
+

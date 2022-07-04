@@ -32,7 +32,7 @@
               </li>
               <li class="hidden-list__item">
                 <span>5.</span> You will integrate the payment system according to the documentation contained in your merchant account
-                <a href="">(menu Settings/Merchant Management/Payment Integration Guide);</a>
+                <a href="#" class="settings-link">(menu Settings/Merchant Management/Payment Integration Guide);</a>
               </li>
               <li class="hidden-list__item">
                 <span>6.</span> Once the integration is complete and the payments have been tested, we will set the processing fee on the merchant’s customers deposit, adjusting it according to the merchant's turnover
@@ -51,7 +51,13 @@
           </div>
           <div class="faq__item-hidden hidden-item">
             <div class="faq__item-inner">
-
+              <div class="instruction__descr">
+                <p>
+                  Integration of the payment system and the merchant's platform is done via the API <a href="#" class="settings-link" style="display:inline; text-decoration: underline;">
+                    (menu Settings/Merchant <br> Management/Payment connection guide)
+                  </a>.
+                </p>
+              </div>
             <div class="hidden-item__title">
               <span></span>
               Deposit of funds:
@@ -61,12 +67,12 @@
                 <span class="bold-span">1.</span>  When depositing funds, the customer requests a payment form;
               </li>
               <li class="hidden-list__item">
-                <span class="bold-span">2.</span>  A payment form is generated with a unique wallet address for payment. By default, the amount specified in the payment form with a fixed amount includes a network fee to pay for transactions in the merchant's storage or Hedge Fund. If desired for some currencies the network fee can be switched to the merchant side (menu Settings/General Settings);
+                <span class="bold-span">2.</span>  A payment form is generated with a unique wallet address for payment. By default, the amount specified in the payment form with a fixed amount includes a network fee to pay for transactions in the merchant's storage or Hedge Fund. If desired for some currencies the network fee can be switched to the merchant side <a href="#" class="settings-link">(menu Settings/General Settings)</a>;
               </li>
               <li class="hidden-list__item">
                 <span class="bold-span">3.</span>
 
-                Upon payment, customer funds are transferred to the processing system wallet, if the currency and amount meet the payment conditions, it is considered successful and sent to the storage of the merchant on the 0Xprocessing platform or sent to the Hedge Fund (if the hedging function is enabled). From the Hedge Fund the amount converted into Stablecoin is sent to the merchant storage when a certain minimum amount is reached in the merchant account settings (Settings menu/Merchant management).
+                Upon payment, customer funds are transferred to the processing system wallet, if the currency and amount meet the payment conditions, it is considered successful and sent to the storage of the merchant on the 0Xprocessing platform or sent to the Hedge Fund (if the hedging function is enabled). From the Hedge Fund the amount converted into Stablecoin is sent to the merchant storage when a certain minimum amount is reached in the merchant account settings <a href="#" class="settings-link">(Settings menu/Merchant management)</a>.
 
               </li>
             </ol>
@@ -92,7 +98,7 @@
                     </li>
                     <li class="instruction__item">
                       <div class="instruction__arrow arrow second-arrow">
-                        <img class="" src="img/instr-icon.png" alt="">
+                        <img class="" src="img/instr-icon-lighter.png" alt="">
                       </div>
                     </li>
                     <li class="instruction__item">
@@ -106,7 +112,7 @@
                     </li>
                     <li class="instruction__item">
                       <div class="instruction__arrow arrow third-arrow">
-                        <img class="" src="img/instr-icon.png" alt="">
+                        <img class="" src="img/instr-icon-last.png" alt="">
                       </div>
                     </li>
                     <li class="instruction__item">
@@ -123,7 +129,7 @@
                     </li>
                     <li class="instruction__item hidden-mob-arrow">
                       <div class="instruction__arrow hidden-arrow">
-                        <img class="" src="img/instr-icon.png" alt="">
+                        <img class="" src="img/instr-icon-last.png" alt="">
                       </div>
                     </li>
                 </ul>
@@ -131,8 +137,75 @@
             </div>
             </div>
             <div class="instruction__inner-bottom">
+              <div class="hidden-item__title">
+                <span></span>
+                Deposit of funds:
+              </div>
+              <div class="instruction__inner-row">
+                <ol class="hidden-list">
+                  <li class="hidden-list__item">
+                    <span class="bold-span">1.</span> The merchant's customer makes a withdrawal request in the merchant's form;
+                  </li>
+                  <li class="hidden-list__item">
+                    <span class="bold-span">2.</span>	The merchant can set a withdrawal limit for its customers: <br>
+                    <p>
+                      — if an amount below the limit is requested, the amount is withdrawn to the merchant's customer's wallet;
+                    </p>
 
+                    <p>
+                      — if an amount higher than the limit is requested, the amount will not be withdrawn until the merchant manager confirms the transaction. The merchant manager role is added to the merchant account settings  <a class="settings-link" href="#">
+                        (Settings menu/ Merchant Management)
+                      </a>.
+                    </p>
+                    <p>
+                      In order to withdraw funds to the customer, the merchant account balance must have liquidity in the appropriate cryptocurrency.
+                    </p>
+                  </li>
+                  <li class="hidden-list__item">
+                    <span class="bold-span">3.</span>
+                    If there is liquidity on the balance of the merchant's account and the withdrawal amount is confirmed, the payment is sent to the merchant's storage with the deduction of the network fee
+                  </li>
+                </ol>
+                <div class="instrcution__steps">
+                  <ul class="steps">
+                    <div class="steps__long-arrow">
+                      <img src="img/faq-arrow-long.png" alt="">
+                    </div>
+                    <li class="steps__item">
+                      <div class=" instruction__btn light-btn">
+                        Merchant’s client wallet
+                      </div>
+                    </li>
+                    <li class="steps__item --relative">
+                      <img src="img/steps-icon.png" alt="">
+                    </li>
+                    <li class="steps__item">
+                      <div class="steps__btn --steps-second-btn">
+                        Merchant’s
+                        withdraw form
+                      </div>
+                    </li>
+                    <li class="steps__item --relative">
+                      <img src="img/steps-icon-2.png" alt="">
+                    </li>
+                    <li class="steps__item">
+                      <div class="steps__btn --steps-third-btn">
+                        0Xprocessing storage
+                        of merchant
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="instruction__descr-bottom">
+
+                  To deposit its liquidity and withdraw funds, the merchant can use the relevant API methods <a href="#">
+                    (Settings menu/Setup merchant management/Payment connection instructions)
+                  </a>.
+
+              </div>
             </div>
+
           </div>
         </div>
         <div class="faq__item">
@@ -148,13 +221,17 @@
             <div class="faq__item-inner">
               <div class="faq__info">
                 <p>
-                  There is a deposit fee of 0.4% or more for using the payment system (depending on the merchant's monthly turnover). The fee is deducted from each payment received on the merchant's balance and is always paid by the merchant.
+                  There is a deposit fee of 0.4% or more for using the payment system (depending on the merchant's monthly <br> turnover). <span>
+                    The fee is deducted from each payment received on the merchant's balance and is always paid by the merchant.
+                  </span>
                 </p>
                 <p>
-                  By default, the customer's payment also includes a network fee, which covers the network fee for transactions within the processing centre. (From system wallet to merchant vault or hedge fund) If you wish, you can switch the network commission to the merchant side for some currencies (Settings/General Settings menu).
+                  By default, the customer's payment also includes a network fee, which covers the network fee for transactions within the processing centre. (From system wallet to merchant vault or hedge fund) If you wish, you can switch the network commission to the merchant side for some currencies <a href="#">
+                    (Settings/General Settings menu)
+                  </a>.
                 </p>
                 <p>
-                  Withdrawals from 0Xprocessing are not subject to any additional fees, only the network fee per transaction is charged.
+                  Withdrawals from <a class="main-link" href="index.html">0Xprocessing</a> are not subject to any additional fees, only the network fee per transaction is <br> charged.
                 </p>
               </div>
             </div>
@@ -173,7 +250,7 @@
             <div class="faq__item-inner">
               <div class="faq__info">
                 <p>
-                  The platform for cryptocurrency payments can be connected to any individual or legal entity, you can specify the terms of connection with our manager leaving contact information in feedback form on 0xprocessing.com website.
+                  The platform for cryptocurrency payments can be connected to any individual or legal entity, you can specify the <br> terms of connection with our manager leaving contact information in feedback form on <a href="index.html" style="text-decoration: underline; font-style: normal;">0xprocessing.com</a> website.
                 </p>
               </div>
             </div>

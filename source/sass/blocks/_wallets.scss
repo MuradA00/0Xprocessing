@@ -1,0 +1,22 @@
+.wallets {
+  padding-top: clamp(4rem, 7.5vw, 7.5rem);
+  .wallet-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8.75rem, 1fr));
+    grid-gap: clamp(2.5rem, 4.5vw, 2.5rem);
+    justify-content: center;
+  }
+  &__inner {
+    margin-top: 2.5rem;
+  }
+  &__connect {
+    margin-top: 2.5rem;
+  }
+  &__connect-descr {
+    p {
+      font-size: clamp(1.125rem, 1.25vw, 1.25rem);
+    }
+  }
+}
+
+

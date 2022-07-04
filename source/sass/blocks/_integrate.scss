@@ -1,0 +1,92 @@
+.integrate {
+  padding: clamp(5rem, 10vw, 10rem) 0;
+  &__title-small {
+    padding-top: 2.5rem;
+  }
+  .integrate-list {
+    padding-top: 2.5rem;
+    @include al-flex;
+    flex-wrap: wrap;
+    grid-gap: 32px;
+    &__btn {
+      position: relative;
+      padding: 16px 2.5rem 22px 2.5rem;
+      position: relative;
+      background-color: var(--black-clr);
+      border-radius: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+      &::before {
+        @include psevdo;
+        margin: -2px;
+        background: linear-gradient(93.73deg,#e8b24f 2.04%,#dd475e 89.47%);
+        border-radius: inherit;
+        inset: 0;
+        z-index: -1;
+        border-radius: 28px;
+      }
+    }
+    &__try {
+      background: linear-gradient(260.02deg, #E8C24F -22.37%, #DD475E 100%),
+    radial-gradient(105.03% 92.27% at 97.99% 8.62%, #EB5323 0%, #811C5E 80.59%, #300947 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      padding: 12px 28px 16px 28px;
+      font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1.25rem;
+      margin-right: 21rem;
+    }
+  }
+  .--large-one {
+    max-width: 54.5rem;
+  }
+  .--flex-100 {
+    flex: 0 0 100%;
+    display: grid;
+    justify-content: flex-end;
+  }
+  .--fixed-btn {
+    max-width: 44.687rem;
+    margin-left: auto;
+  }
+  .--rotated-arrow {
+    transform: rotate(90deg);
+    margin-right: 23rem;
+  }
+}
+
+@include max-w(72.8125rem) {
+  .integrate-list {
+    &__item {
+
+      &:nth-child(1) {
+        max-width: 14.75rem;
+      }
+      &:nth-child(3) {
+        max-width: 54.5rem;
+      }
+      flex: 0 0 100%;
+      margin: 0 auto;
+    }
+    &__arrow {
+      display: grid;
+      transform: rotate(90deg);
+      justify-content: center;
+    }
+    &__try {
+      margin-right: 0 !important;
+    }
+  }
+  .--flex-100 {
+    justify-content: center !important;
+  }
+  .--rotated-arrow {
+    margin-right: 0 !important;
+  }
+}

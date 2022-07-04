@@ -36,6 +36,10 @@ html {
   min-height: 100%;
 }
 
+.gambling-page {
+  padding-bottom: clamp(7rem, 14.0625vw, 14.0625rem);
+}
+
 main {
   flex: 1 1 auto;
 }

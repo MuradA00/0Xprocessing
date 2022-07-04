@@ -37,16 +37,49 @@
     opacity: 0;
     transition: all .2s ease-in-out;
     cursor: default;
+
   }
   &__item-inner {
     padding-top: 28px;
+  }
+  &__info {
+    max-width: 63.5rem;
+    p {
+      font-size: clamp(1rem, 1.125vw, 1.125rem);
+      &:not(:first-child) {
+        padding-top: 23px;
+      }
+      span {
+        font-weight: 700;
+
+      }
+    }
+    a {
+      text-decoration: underline;
+      font-weight: 400;
+      font-style: italic;
+    }
+    .main-link {
+      font-weight: 700;
+      position: relative;
+      text-decoration: none;
+      font-style: normal;
+      &::after {
+        @include psevdo;
+        width: 100%;
+        height: 2px;
+        background-color: var(--white-clr);
+        bottom: -5px;
+        border-radius: 2px;
+      }
+    }
   }
   .hidden-list {
     padding-top: 28px;
     display: grid;
     grid-gap: 1.25rem;
     cursor: default;
-
+    max-width: 65rem;
     &__item {
       font-size: clamp(1.125rem, 1.25vw, 1.25rem);
       span {
@@ -54,7 +87,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
       a {
         font-weight: 700;
         position: relative;
@@ -109,6 +141,7 @@
     grid-gap: clamp(1.5rem, 2.0625vw, 2.0625rem);
     font-size: 1.25rem;
     font-weight: 700;
+    margin-top: 28px;
     span {
       background: var(--yellow-clr);
       width: 1.6875rem;
@@ -120,10 +153,55 @@
 .instruction {
   position: relative;
   max-width: 68.5rem;
+  &__inner-bottom {
+    margin-top: 3rem;
+  }
+  &__descr-bottom {
+    margin-top: 41px;
+    font-size: clamp(1.125rem, 1.225vw, 1.225rem);
+    a {
+      font-weight: 400;
+      font-style: italic;
+      position: relative;
+      display: inline;
+      text-decoration: underline;
+      &::after {
+        @include psevdo;
+        width: 100%;
+        height: 2px;
+        background-color: var(--white-clr);
+        bottom: -5px;
+        border-radius: 2px;
+      }
+    }
+  }
+  &__descr {
+    font-size: clamp(1.125rem, 1.225vw, 1.225rem);
+    margin-top: 28px;
+  }
   &__item {
     &:nth-child(5),
     &:nth-child(7) {
       position: relative;
+    }
+  }
+  &__inner-bottom {
+    p {
+      padding-top: 20px;
+    }
+    a {
+      font-weight: 400 !important;
+      font-style: italic;
+    }
+  }
+  &__inner-row {
+    display: grid;
+    grid-template-columns: .6fr 0.25fr;
+    justify-content: space-between;
+    align-items: center;
+    @include max-w(62.5rem) {
+      grid-template-columns: 100%;
+      grid-gap: 2.5rem;
     }
   }
   padding-top: clamp(3rem, 3.75vw, 3.75rem);
@@ -167,70 +245,6 @@
     font-size: clamp(.75rem, 1vw, 1rem);
     font-weight: 700;
   }
-  .light-btn {
-    max-width: 15.3125rem;
-    width: 100%;
-    background-color: #E8B24F;
-    border: 1px solid rgba(232, 178, 79, 1);
-    color: var(--black-clr);
-  }
-  .light-gradient {
-    background-color: var(--black-clr);
-    color: var(--white-clr);
-    border: 2px solid transparent;
-    border-radius: 16px;
-    background-clip: padding-box;
-    /* just to show box-shadow still works fine */
-    position: relative;
-    &::after {
-      position: absolute;
-      top: -2px; bottom: -2px;
-      left: -2px; right: -2px;
-      background: linear-gradient(0deg, #E59A52, #E59A52),
-      linear-gradient(0deg, #FFFFFF, #FFFFFF);
-      content: '';
-      z-index: -1;
-      border-radius: 16px;
-    }
-  }
-  .lighter-gradient {
-    background-color: var(--black-clr);
-    color: var(--white-clr);
-    border: 2px solid transparent;
-    border-radius: 16px;
-    background-clip: padding-box;
-    /* just to show box-shadow still works fine */
-    position: relative;
-    &::after {
-      position: absolute;
-      top: -2px; bottom: -2px;
-      left: -2px; right: -2px;
-      background: linear-gradient(0deg, #E27957, #E27957),
-      linear-gradient(0deg, #FFFFFF, #FFFFFF);
-      content: '';
-      z-index: -1;
-      border-radius: 16px;
-    }
-  }
-  .most-light-btn {
-    background-color: var(--black-clr);
-    color: var(--white-clr);
-    border: 2px solid transparent;
-    border-radius: 16px;
-    background-clip: padding-box;
-    /* just to show box-shadow still works fine */
-    position: relative;
-    &::after {
-      position: absolute;
-      top: -2px; bottom: -2px;
-      left: -2px; right: -2px;
-      background:  linear-gradient(0deg, #E0615A, #E0615A),
-      linear-gradient(0deg, #FFFFFF, #FFFFFF);
-      content: '';
-      z-index: -1;
-      border-radius: 16px;
-    }
-  }
 }
 
 .instruction-list {
@@ -246,7 +260,7 @@
 .btn-filled {
   position: absolute;
   right: 11.9em;
-  bottom: min(-10.73rem, -9.6vw);
+  bottom: min(-11rem, -9.3vw);
   background: linear-gradient(266.84deg, #DD475E 3.39%, #E8B24F 76.41%);
   max-width: 9.25rem;
 }
@@ -266,6 +280,79 @@
   left: 50%;
 }
 
+.steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 13px;
+  position: relative;
+  @include max-w(62.5rem) {
+    max-width: 18.75rem;
+    margin: 0 auto;
+  }
+  &__btn {
+    font-size: 1rem;
+  }
+  &::before {
+    position: absolute;
+    content: 'withdraw transfer';
+    font-size: 16px;
+    color: #97959B;
+    font-weight: 700;
+    top: 50%;
+    left: -4em;
+    left: 3rem;
+    text-align: center;
+    transform: translateY(-50%) rotate(270deg);
+  }
+  &__long-arrow {
+    position: absolute;
+    left: -1rem;
+    top: 3%;
+    height: 20.125rem;
+    @include max-w(75rem) {
+      left: -3em;
+    }
+    @include max-w(62.5rem) {
+      left: -1em;
+    }
+  }
+  .--steps-second-btn,
+  .--steps-third-btn {
+    padding: 11px 26px;
+    font-size: 1rem;
+    outline: 2px solid rgba(74, 73, 77, 1);
+    font-weight: 700;
+    color: var(--white-clr);
+    max-width: 10.625rem;
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 19px;
+  }
+  .--steps-third-btn {
+    max-width: 13.6875rem;
+    line-height: 150%;
+    background: linear-gradient(266.84deg, #DD475E 3.39%, #E8B24F 76.41%);
+    outline: 2px solid rgba(221, 71, 94, 1);
+  }
+  .--relative {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: 'withdraw request';
+      font-size: 16px;
+      color: #97959B;
+      font-weight: 700;
+      top: 40%;
+      left: 3rem;
+      text-align: center;
+      transform: translateY(-50%);
+    }
+  }
+}
 
 @include max-w(60rem) {
   .instruction-list {
@@ -320,3 +407,81 @@
 
 }
 
+.settings-link {
+  font-weight: 400 !important;
+  font-style: italic;
+  position: relative;
+  &::before {
+    @include psevdo;
+    width: 100%;
+    height: 1px;
+    background-color: var(--white-clr);
+    bottom: -5px;
+    border-radius: 2px;
+  }
+}
+
+.light-btn {
+  max-width: 15.3125rem;
+  width: 100%;
+  background-color: #E8B24F;
+  border: 1px solid rgba(232, 178, 79, 1);
+  color: var(--black-clr);
+}
+.light-gradient {
+  background-color: var(--black-clr);
+  color: var(--white-clr);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background-clip: padding-box;
+  /* just to show box-shadow still works fine */
+  position: relative;
+  &::after {
+    position: absolute;
+    top: -2px; bottom: -2px;
+    left: -2px; right: -2px;
+    background: linear-gradient(0deg, #E59A52, #E59A52),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    content: '';
+    z-index: -1;
+    border-radius: 16px;
+  }
+}
+.lighter-gradient {
+  background-color: var(--black-clr);
+  color: var(--white-clr);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background-clip: padding-box;
+  /* just to show box-shadow still works fine */
+  position: relative;
+  &::after {
+    position: absolute;
+    top: -2px; bottom: -2px;
+    left: -2px; right: -2px;
+    background: linear-gradient(0deg, #E27957, #E27957),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    content: '';
+    z-index: -1;
+    border-radius: 16px;
+  }
+}
+.most-light-btn {
+  background-color: var(--black-clr);
+  color: var(--white-clr);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background-clip: padding-box;
+  /* just to show box-shadow still works fine */
+  position: relative;
+  &::after {
+    position: absolute;
+    top: -2px; bottom: -2px;
+    left: -2px; right: -2px;
+    background:  linear-gradient(0deg, #E0615A, #E0615A),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    content: '';
+    z-index: -1;
+    border-radius: 16px;
+  }
+}

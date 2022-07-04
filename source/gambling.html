@@ -2,10 +2,10 @@
 <html lang="eng">
 @@include('_head.html',{})
 
-<body>
+<body id="body">
   @@include('_header.html',{})
 
-  <main>
+  <main class="gambling-page">
 
   <section class="tools business">
     <div class="tools__container _container">
@@ -48,6 +48,19 @@
                 <use href="img/sprite/sprite.svg#arrow-down"></use>
               </svg>
             </button>
+          </div>
+          <div class="choose-row">
+            <ul class="choose-list">
+              <li>
+                <span class="bullet active-bullet" onclick="showRow(event, 'first-row')"></span>
+              </li>
+              <li>
+                <span class="bullet" onclick="showRow(event, 'sec-row')"></span>
+              </li>
+              <li>
+                <span class="bullet" onclick="showRow(event, 'third-row')"></span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -312,6 +325,74 @@
     </div>
   </section>
 
+  <div class="customers">
+    <div class="customers__container _container">
+      <div class="customers__body">
+        <h6 class="media__title _med-title">
+          Customers About Us
+        </h6>
+        <div class="media__heading">
+          <p>
+            We appreciate every opinion on our service and thank each one of you for your trust in Cryptoprocessing.com
+          </p>
+          <div class="choose-row">
+            <ul class="choose-list">
+              <li>
+                <span class="bullet active-bullet" ></span>
+              </li>
+              <li>
+                <span class="bullet" ></span>
+              </li>
+              <li>
+                <span class="bullet"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="customer__inner">
+          <div class="customer__clients-row">
+            <div class="customer__item">
+              <div class="customer__item-inner">
+                <div class="customer__name">
+                  <svg width="50" height="50">
+                    <use href="img/sprite/sprite.svg#auth-icon"></use>
+                  </svg>
+                  <span>
+                    Name of client
+                  </span>
+                </div>
+                <div class="customer__info">
+                  <p>
+                    NOWPayments is extremely easy to integrate into existing websites, and you can even use our donation links to display on your social media accounts. For online stores, we offer custom widgets, buttons, and plugins for every major e-commerce platform in existence! Accepting crypto payments has never been easier, and the best thing is that only several minutes stand between accepting Bitcoin as payment at your online store.
+
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="customer__item">
+              <div class="customer__item-inner">
+                <div class="customer__name">
+                  <svg width="50" height="50">
+                    <use href="img/sprite/sprite.svg#auth-icon"></use>
+                  </svg>
+                  <span>
+                    Name of client
+                  </span>
+                </div>
+                <div class="customer__info">
+                  <p>
+                    NOWPayments is extremely easy to integrate into existing websites, and you can even use our donation links to display on your social media accounts. For online stores, we offer custom widgets, buttons, and plugins for every major e-commerce platform in existence! Accepting crypto payments has never been easier, and the best thing is that only several minutes stand between accepting Bitcoin as payment at your online store.
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   @@include('_faq.html',{})
 
   </main>
@@ -319,6 +400,7 @@
 
   @@include('_footer.html',{})
   <script src="js/tabs.js"></script>
+  <script src="js/burger.js"></script>
   <script src="js/accord.js"></script>
   <script src="js/common.js"></script>
 </body>

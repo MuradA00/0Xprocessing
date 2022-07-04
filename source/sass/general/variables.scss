@@ -76,5 +76,10 @@
   padding-top: clamp(5rem, 7.5vw, 7.5rem);
 }
 
-
-
+@include max-w(29.375rem) {
+  ._default-title,
+  ._med-title,
+  ._small-title {
+    text-align: center;
+  }
+}
