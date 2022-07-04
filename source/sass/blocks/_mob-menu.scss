@@ -40,7 +40,7 @@
   &__footer {
     margin-top: 3rem;
     background-color: var(--white-clr);
-    padding: 1rem 2rem;
+    padding: 2rem 1rem;
     margin: 0rem 0rem 4.8rem 0;
     .social-footer {
       @include al-flex;
@@ -55,7 +55,8 @@
   .mob-footer {
     &__heading {
       margin-bottom: 1rem;
-      font-size: 2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
       color: var(--black-clr);
     }
   }
@@ -86,7 +87,7 @@
   overflow: hidden;
 }
 
-@media only screen and (max-height: 38.125rem) {
+@media only screen and (max-height: 40.625rem) {
   .nav-menu {
     &__inner {
       overflow-y: auto;
@@ -99,39 +100,3 @@
 }
 
 
-@include max-w(50rem) {
-  .hedging {
-    overflow: hidden;
-    &__total {
-      max-width: 29.375rem;
-      margin: 0 auto;
-    }
-    .total-block {
-      &__inner {
-        flex-direction: column;
-      }
-      &__arrow {
-        transform: rotate(90deg);
-      }
-    }
-    &__inner {
-      margin-top: 7rem;
-      display: flex;
-      flex-direction: column;
-    }
-    &__tree {
-      transform: rotate(90deg);
-      max-width: 35rem;
-      min-height: 30rem;
-      height: 100%;
-      margin: 0 auto;
-      picture {
-        min-width: 30rem;
-      }
-    }
-  }
-}
-
-@include max-w(38.75rem) {
-
-}

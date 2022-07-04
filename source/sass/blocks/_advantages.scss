@@ -1,0 +1,207 @@
+.advantages {
+  padding-top: clamp(4rem, 8.75vw, 8.75rem);
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include psevdo;
+    right: -30%;
+    width: clamp(20rem, 42.375rem, 42.375vw);
+    height: clamp(25rem, 44.875vw, 44.875rem);
+    background-image: url('../../img/advantages/adv-decor.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: blur(50px);
+    z-index: -1;
+  }
+  &__block {
+    @include al-flex;
+    grid-gap: 24px;
+    padding: 30px 36px 26px 36px;
+  }
+  &__subtitle {
+    margin-top: 2.5rem;
+  }
+  &__inner {
+    padding-top: clamp(3rem, 5vw, 5rem);
+  }
+  &__info {
+    p {
+      font-size: clamp(1.25rem, 1.375vw, 1.375rem);
+      .yellow-text {
+        background: var(--yellow-clr);
+        font-weight: 700;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .italic-style {
+        font-style: italic;
+      }
+    }
+  }
+  &__currency {
+    font-size: 1.25rem;
+  }
+  &__block-arrow {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  &__tree {
+    width: clamp(16rem, 55vw, 55rem);
+    margin: 0 auto;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    picture {
+      height: 100%;
+    }
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.advantages-list {
+  &__btn {
+    padding: clamp(.5rem, 1vw, 1vw) clamp(.8rem, 2.5vw, 2.5rem) clamp(.5rem, 1.375vw, 1.375rem) clamp(.8rem, 2.5vw, 2.5rem);
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--black-clr);
+    font-size: clamp(0.6rem, 1.5vw, 1.5rem);
+    position: absolute;
+    &:nth-child(2) {
+      top: clamp(12.5em, 10vw, 10em);
+      left: min(-6.5em, 1em);
+
+    }
+    &:nth-child(3) {
+      top: -2em;
+      left: 1em;
+    }
+    &:nth-child(4) {
+      top: 0em;
+      left: 14em;
+    }
+    &:nth-child(5) {
+      right: 2em;
+      top: 7em;
+      &::before {
+        background:rgba(228, 134, 85, 1);
+      }
+    }
+    &:nth-child(6) {
+      right: -3.5em;
+      bottom: 8.3em;
+
+    }
+    &::before {
+      @include psevdo;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(0deg, #FFC266, #FFC266),
+      linear-gradient(0deg, #FFFFFF, #FFFFFF);
+      z-index: -1;
+      margin: -2px;
+    }
+  }
+}
+
+.--read-more {
+  cursor: pointer;
+  grid-gap: 20px;
+  transition: .2s ease;
+  &::after {
+    content: '';
+    display: none;
+    background-image: url('../../img/sprite/arrow-down-black.svg');
+    background-size: cover;
+    background-position: center;
+    width: 15px;
+    height: 17.6px;
+  }
+  &::before {
+    background: linear-gradient(0deg, #433F49, #433F49),
+    linear-gradient(0deg, #E48655, #E48655);
+    transition: .3s ease;
+  }
+  &:hover::before {
+    content: none;
+  }
+  &:hover {
+    background: linear-gradient(0deg, #FFC266, #FFC266), #FFFFFF;
+    color: var(--black-clr);
+    svg {
+      display: none;
+    }
+  }
+  &:hover::after {
+    display: block;
+  }
+}
+
+@include max-w(53.125rem) {
+  .advantages {
+    &__block {
+      flex-direction: column;
+      padding: 2rem 1rem;
+      max-width: 30rem;
+      margin-inline: auto;
+    }
+    &__block-arrow {
+      transform: rotate(90deg);
+    }
+  }
+  .advantages-list {
+    &__btn {
+      &:nth-child(6) {
+        &::after {
+          width: 10px;
+          height: 10px;
+
+        }
+      }
+    }
+  }
+}
+
+
+@include max-w(37.5rem) {
+ .advantages-list {
+  &__btn {
+   &::before {
+    margin: -1px;
+   }
+    &:nth-child(2) {
+      top: min(9em, 10em);
+      left: -7em;
+    }
+    &:nth-child(4) {
+      left: 10em;
+    }
+    &:nth-child(6) {
+      bottom: 7.3em;
+      right: -5em;
+      svg {
+        width: 10px;
+        height: 10px;
+      }
+
+    }
+  }
+ }
+}
+
+@include max-w(31.25rem) {
+  .advantages-list {
+    &__btn {
+      &:nth-child(6) {
+        bottom: 5.2em;
+      }
+    }
+  }
+}
+

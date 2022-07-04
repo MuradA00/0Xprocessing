@@ -1,5 +1,24 @@
 .integrate {
   padding: clamp(5rem, 10vw, 10rem) 0;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    @include psevdo;
+    left: 0;
+    top: 50%;
+    width: clamp(20rem, 42.375rem, 42.375vw);
+    height: clamp(25rem, 44.875vw, 44.875rem);
+    background-image: url('../../img/integration/integrate-decor-bottom.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: blur(50px);
+    @include max-w(48rem) {
+      right: -50% !important;
+      width: 15rem;
+
+    }
+   }
+
   &__title-small {
     padding-top: 2.5rem;
   }

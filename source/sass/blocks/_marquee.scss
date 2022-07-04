@@ -1,0 +1,101 @@
+.marquee {
+  padding-top: clamp(4.5rem, 7.5vw, 7.5rem);
+  overflow: hidden;
+  &__title {
+    text-align: center;
+    margin-bottom: clamp(3rem, 4.0625vw, 4.0625rem);
+  }
+
+  &__list {
+    display: table-cell;
+    white-space: nowrap;
+    will-change: transform;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: 14s;
+    animation-duration: 14s;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-name: move;
+    animation-name: move;
+    &:hover {
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+  }
+  li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__item {
+    &:hover::before {
+      opacity: 1;
+    }
+    &:hover {
+      cursor: auto;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #FFF;
+    vertical-align: middle;
+    line-height: 30px;
+    margin-right: 20px;
+    border: 2px solid transparent;
+    padding: 0 20px;
+    height: 96px;
+    border-radius: 20px;
+    background: #191a1f;
+    background-clip: padding-box;
+    position: relative;
+    &::before {
+      content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    z-index: -1;
+    transition: opacity .3s ease;
+    margin: -2px;
+    opacity: 0;
+    background: linear-gradient(93.73deg,#E8B24F 2.04%,#DD475E 89.47%);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: inherit;
+      z-index: -1;
+      transition: opacity .3s ease;
+      margin: -1px;
+    background: #433F49;
+    }
+
+  }
+  .sec {
+    margin-top: 20px;
+  }
+}
+
+@include max-w(56.25rem) {
+  .marquee {
+    &__item {
+      border-radius: 12px;
+    height: 47px;
+    font-size: 12px;
+    margin-right: 12px;
+    }
+  }
+}

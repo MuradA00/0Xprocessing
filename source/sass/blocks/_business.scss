@@ -27,6 +27,25 @@
   }
   &__image {
     padding-top: 15px;
+    position: relative;
+    &::before {
+      @include psevdo;
+      width: clamp(10rem, 20.125vw, 20.125rem);
+      height: clamp(10rem, 23.125vw, 23.125rem);
+      background-image: url('../../img/sprite/hero-element.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: -12.5%;
+      top: -17%;
+      z-index: -1;
+      @include max-w(28.125rem) {
+        top: -10%;
+      }
+      @include max-w(56.25rem) {
+        top: -5%;
+        left: -5%;
+      }
+    }
   }
   &__send {
     max-width: 14.0625rem;
@@ -122,6 +141,20 @@
 
 .help-ar {
   padding: clamp(5rem, 10vw, 10rem) 0;
+  position: relative;
+overflow: hidden;
+  &::before {
+    @include psevdo;
+    left: 0;
+    width: clamp(20rem, 42.375rem, 42.375vw);
+    height: clamp(25rem, 44.875vw, 44.875rem);
+    background-image: url('../../img/sprite/need-help-decor.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: blur(50px);
+    z-index: -1;
+    top: 50%;
+   }
   &__body {
     max-width: 49.0625rem;
     margin-left: auto;

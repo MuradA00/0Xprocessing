@@ -16,18 +16,6 @@
       right: -70%;
     }
   }
-  &::after {
-    @include psevdo;
-    top: -27%;
-    width: clamp(10rem, 68.1875vw, 68.1875rem);
-    height: clamp(20rem, 55.75vw, 55.75rem);
-    background-image: url('../../img/sprite/contact-blured.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top;
-    left: -45%;
-
-  }
   &__inner {
     display: grid;
     grid-template-columns: 0.325fr 0.39fr;

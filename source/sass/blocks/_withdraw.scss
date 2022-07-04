@@ -1,6 +1,19 @@
 .withdraw {
   overflow: hidden;
   padding: clamp(5rem, 10vw, 10rem) 0;
+  position: relative;
+  &::before {
+    @include psevdo;
+    right: 0;
+    bottom: -65%;
+    width: clamp(20rem, 42.375rem, 42.375vw);
+    height: clamp(25rem, 40.875vw, 40.875rem);
+    background-image: url('../../img/fees/fees-decor.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: blur(50px);
+
+   }
   &__title {
     font-size: clamp(1.8rem, 2.625vw, 2.625rem) !important;
   }

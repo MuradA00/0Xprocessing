@@ -1,4 +1,7 @@
 .customer {
+  position: relative;
+  overflow: hidden;
+
   &__clients-row {
     padding-top: clamp(2.5rem, 5vw, 5rem);
     display: grid;
@@ -32,4 +35,26 @@
       line-height: 122%;
     }
   }
+}
+
+.customers {
+
+    position: relative;
+  &::before {
+    @include psevdo;
+    right: -30%;
+    top: 50%;
+    width: clamp(16rem, 42.375rem, 42.375vw);
+    height: clamp(20rem, 44.875vw, 44.875rem);
+    background-image: url('../../img/gambling/gambling-decor.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include max-w(45.625rem) {
+      right: -40%;
+    }
+    @include max-w(28.125rem) {
+      right: -60%;
+
+    }
+   }
 }

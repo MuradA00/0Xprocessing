@@ -1,6 +1,9 @@
 .hero {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
+  @include max-w(43.75rem) {
+    height: 90vh;
+  }
   &__container {
     min-height: 100%;
     position: relative;

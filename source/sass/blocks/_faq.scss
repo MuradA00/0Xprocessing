@@ -31,6 +31,11 @@
   &__item-heading {
     font-size: clamp(1.125rem, 1.65vw, 1.65rem);
     font-weight: 700;
+    svg {
+      @include max-w(43.75rem) {
+        width: 15px;
+      }
+    }
   }
   &__item-hidden {
     max-height: 0;
@@ -113,6 +118,12 @@
 .collapse {
   max-height: 100%;
   opacity: 1;
+  svg {
+    transition: all .3s ;
+    filter: brightness(25%);
+    fill: black !important;
+    transform: rotate(0deg);
+  }
 }
 
 .arrow-change {
