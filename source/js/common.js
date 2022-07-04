@@ -16,7 +16,7 @@ if (menuLinks.length > 0) {
   menuLinks.forEach(function (menuLink) {
     menuLink.addEventListener("click", function (event) {
       mobMenu.classList.remove('--open-menu');
-      body.classList.remove('--body-locked')
+      html.classList.remove('--body-locked')
     });
   });
 }
@@ -30,7 +30,7 @@ anchors.forEach(function(item) {
   item.addEventListener('click', function(e) {
     e.preventDefault();
     let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-    body.classList.remove('--body-locked')
+    html.classList.remove('--body-locked')
     mobMenu.classList.remove('--open-menu')
     let scroller = setInterval(function() {
       let scrollBy = coordY / framesCount;
