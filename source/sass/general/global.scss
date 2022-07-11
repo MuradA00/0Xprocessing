@@ -7,12 +7,31 @@ body {
   font-family: 'Euclid Square', sans-serif;
   font-weight: inherit;
   font-size: inherit;
+  scroll-behavior: smooth;
   line-height: inherit;
   min-height: -webkit-fill-available;
   background-color: var(--black-clr);
   height: 100%;
   overflow-x: hidden;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:var(--black-clr);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(91.27deg,#dd475e 4.41%,#6d1576 91.09%),linear-gradient(0deg,#dd475e,#dd475e);
+  border-radius: 5px;
+}
+
+
 
 html {
   box-sizing: border-box;
@@ -161,42 +180,7 @@ input[type="number"] {
   }
 }
 
-* {
-  scrollbar-color: #EDF3F6;
 
-  &::-webkit-scrollbar {
-    width: 9px;
-    box-shadow: none;
-    height: 100%;
-    display: none;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #3C93F0;
-    border-radius: 4px;
-    background-clip: padding-box;
-    border: 2px solid #EDF3F6;
-    box-shadow: none;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color:#EDF3F6;
-    cursor: pointer;
-    border-radius: 6px;
-    box-shadow: none;
-    height: 100%;
-  }
-
-  ::-webkit-scrollbar-button {
-    background-color: transparent;
-    box-shadow: none;
-    display: none;
-  }
-}
 
 // .main-wrapper {
 //   display: grid;

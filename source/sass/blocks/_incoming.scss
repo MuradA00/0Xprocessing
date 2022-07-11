@@ -68,3 +68,9 @@
     justify-content: center;
   }
 }
+
+.--metamask {
+  &::before {
+    opacity: 1;
+  }
+}

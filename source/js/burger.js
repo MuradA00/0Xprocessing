@@ -19,3 +19,15 @@ closeIcon.addEventListener('click', () => {
 function menuOpen () {
   mobMenu.classList.add('--open-menu')
 }
+
+
+const menuMobLinks = document.querySelectorAll('.mob-menu__link');
+
+if (menuMobLinks.length > 0) {
+  menuMobLinks.forEach(function (menuMobLinks) {
+    menuMobLinks.addEventListener("click", function (event) {
+      mobMenu.classList.remove('--open-menu');
+      html.classList.remove('--body-locked')
+    });
+  });
+}

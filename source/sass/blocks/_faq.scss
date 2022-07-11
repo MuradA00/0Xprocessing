@@ -1,10 +1,13 @@
 .faq {
   padding: clamp(5rem, 10vw, 10rem) 0 0;
   &__item {
-    padding-bottom: 28px;
+    min-height: 65px;
     border-bottom: 2px solid rgba(67, 63, 73, 1);
     cursor: pointer;
     overflow: hidden;
+  }
+  &__item-visible {
+    min-height: 65px;
   }
   &__heading {
     padding-bottom: 2.5rem;
@@ -20,6 +23,7 @@
       position: relative;
       svg {
         transform: rotate(-90deg);
+        margin-right: 5px;
       }
   }
   &__inner {

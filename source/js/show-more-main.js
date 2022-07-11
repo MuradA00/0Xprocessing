@@ -9,7 +9,7 @@ showMoreMain.addEventListener('click', () => {
   const arrayMain = Array.from(document.querySelector('.comprasion-list').children)
   const visibleRows = arrayMain.slice(0, rowItems);
 
-  visibleRows.forEach(el => el.classList.add('show-row'))
+  visibleRows.forEach(el => el.classList.toggle('show-row'))
 
   // columns.classList.remove('--overlay-list')
 
