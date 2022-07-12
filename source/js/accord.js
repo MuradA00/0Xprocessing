@@ -11,11 +11,13 @@ for (i = 0; i < acc.length; i++) {
       panel.style.transition = 'all .4s ease'
       panel.style.opacity = '0'
       panel.style.visibility = 'hidden'
+      panel.style.marginBottom = '0px'
 
     } else {
       panel.style.opacity = '1'
       panel.style.maxHeight = panel.scrollHeight + "px";
       panel.style.visibility = 'visible'
+      panel.style.marginBottom = '30px'
     }
   });
 };

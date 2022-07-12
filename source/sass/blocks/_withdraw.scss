@@ -47,7 +47,7 @@
     grid-gap: 15px;
 
     &__item {
-      &:nth-child(n + 4) {
+      &:nth-child(n + 3) {
         display: none;
       }
       padding: 15px 33px 15px clamp(1.5rem, 3.75vw, 3.75rem);
@@ -96,20 +96,20 @@
   }
 }
 
-.--overlay-list {
-  position: relative;
-  overflow: hidden;
-  &::after {
-    @include psevdo;
-    width: 110%;
-    height: 100%;
-    background: radial-gradient(100% 259.97% at 0 50%,#191A1F 0,rgba(25,26,31,1) 100%);
-    transform: rotate(180deg);
-    top: 88%;
-    left: 0;
-    border-radius: 18px;
-  }
-}
+// .--overlay-list {
+//   position: relative;
+//   overflow: hidden;
+//   &::after {
+//     @include psevdo;
+//     width: 110%;
+//     height: 100%;
+//     background: radial-gradient(100% 259.97% at 0 50%,#191A1F 0,rgba(25,26,31,1) 100%);
+//     transform: rotate(180deg);
+//     top: 88%;
+//     left: 0;
+//     border-radius: 18px;
+//   }
+// }
 
 
 .visible-item {
