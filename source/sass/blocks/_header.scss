@@ -1,11 +1,13 @@
 .header {
   padding-top: clamp(1.5rem, 2.5vw, var(--40-spacing));
+  position: relative;
   &__menu {
     display: none;
     grid-gap: 7px;
     span {
       width: 2rem;
       height: 3px;
+      border-radius: 10px;
       background-color: var(--white-clr);
 
     }

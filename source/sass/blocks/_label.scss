@@ -15,6 +15,7 @@
   .benefits-list {
     padding-top: 24px;
     display: grid;
+    min-height: 13.8rem;
     grid-gap: 24px;
     &__item {
       color: var(--white-clr);

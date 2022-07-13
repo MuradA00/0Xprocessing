@@ -30,9 +30,9 @@
       color: var(--grey-clr);
     }
   }
-  &__title {
-    padding-top: clamp(2.5rem, 5vw, var(--80-spacing));
-  }
+  // &__title {
+  //   padding-top: clamp(2.5rem, 5vw, var(--80-spacing));
+  // }
   &__subtitle {
     padding-top: 1.75rem;
     max-width: 70rem;
