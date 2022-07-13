@@ -24,7 +24,7 @@
   --80-spacing: 5rem;
   --100-spacing: 6.25rem;
   --160-spacing: 10rem;
-  --cont-spacing: 0px clamp(0.781rem, 0.9375vw, 1.25rem);
+  --cont-spacing: 0px clamp(0.651rem, 0.9375vw, 1.25rem);
 }
 
 ._container {
@@ -60,7 +60,7 @@
 }
 
 ._med-title {
-  font-size: clamp(2.25rem, 2.625vw, 2.625rem) !important ;
+  font-size: clamp(2rem, 2.625vw, 2.625rem) !important ;
   letter-spacing: 0.06em;
   font-weight: 700;
   line-height: 120%;

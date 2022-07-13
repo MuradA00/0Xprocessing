@@ -6,18 +6,11 @@
   @@include('_header.html',{})
 
   <main>
+    @@include('_breadcrumbs.html',{})
     <section class="business">
       <div class="business__container _container">
         <div class="business__body">
-          <div class="business__heading contact__heading">
-            <span>Home</span>
-            <svg width="12" height="14.11">
-              <use href="img/sprite/sprite.svg#arrow-right"></use>
-            </svg>
-            <span>
-              Business
-            </span>
-        </div>
+
         </div>
         <div class="business__inner">
           <div class="business__info">
@@ -164,6 +157,8 @@
 
 
   @@include('_footer.html',{})
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/breadcrumbs.js"></script>
   <script src="js/accord.js"></script>
   <script src="js/burger.js"></script>
   <script src="js/common.js"></script>

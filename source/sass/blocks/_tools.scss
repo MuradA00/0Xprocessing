@@ -12,15 +12,11 @@
       to {opacity: 1;
       transform: translateY(0);}
     }
-
   }
   &__wrapper {
-    padding-top: clamp(3rem, 5vw, 5rem);
+    padding-top: clamp(1.5rem, 3vw, 3rem);
   }
-  #exchange,
-  #solutions {
-    display: none;
-  }
+
 
   &__heading {
     font-size: clamp(1.45rem, 1.625vw, 1.625rem);
@@ -97,6 +93,8 @@
   padding: 16px 32px 18px 32px;
   border-radius: 28px;
   position: relative;
+  color: var(--white-clr);
+  outline: 2px solid rgba(67, 63, 73, 1);
   transition: .3s ease-in-out;
   &::after {
     position: relative;
@@ -106,18 +104,7 @@
     display: none;
     transition: .3s ease-in-out;
   }
-  &:nth-child(1) {
-    background: var(--yellow-clr);
-  }
-  &:nth-child(2) {
-    color: var(--white-clr);
-    outline: 2px solid rgba(67, 63, 73, 1);
-  }
-  &:nth-child(3) {
-    margin-top: 50px;
-    color: var(--white-clr);
-    outline: 2px solid rgba(67, 63, 73, 1);
-  }
+
 }
 
 .active-panel-btn {

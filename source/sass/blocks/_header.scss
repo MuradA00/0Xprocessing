@@ -134,11 +134,12 @@
 header {
   transition: all .4s ease-in;
   z-index: 999;
-
+  will-change: transform;
 }
 
 .--scroll-down header {
-  transform: translate3d(0, -100%, 0);
+  top: -125px;
+  position: absolute;
 }
 
 .--scroll-up header{
@@ -151,4 +152,15 @@ header {
   z-index: 999;
   outline: 2px solid #dd475e;
   filter: drop-shadow(0 -10px 15px #dd475e);
+  // animation: fade-up .3s ease-in-out;
+  transition: .4s ease-in;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -1,0 +1,12 @@
+.breadcrumbs-wrapper {
+  padding-top: clamp(3vw, 3.25rem, 84px);
+}
+
+.breadcrumbs {
+  @include al-flex;
+  grid-gap: 16px;
+  &__item {
+    color: #7E8088;
+    font-size: clamp(0.8rem, 1.25rem, 1.25vw);
+  }
+}

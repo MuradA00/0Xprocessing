@@ -64,7 +64,8 @@ const swiper = new Swiper('.media-wrapper', {
   spaceBetween: 70,
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: '.media__bullets',
+    clickable: true,
   },
 
   // Navigation arrows
@@ -75,3 +76,24 @@ const swiper = new Swiper('.media-wrapper', {
 
   // And if we need scrollbar
 });
+
+const secSwiper = new Swiper('.custom__wrapper', {
+  // Optional parameters
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 70,
+  // If we need pagination
+  pagination: {
+    el: '.choose-list',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+});
+

@@ -6,140 +6,127 @@
   @@include('_header.html',{})
 
   <main class="gambling-page">
-
+    @@include('_breadcrumbs.html',{})
   <section class="tools business">
     <div class="tools__container _container">
       <div class="tools__body">
-        <div class="business__heading contact__heading">
-          <span>Home</span>
-          <svg width="12" height="14.11">
-            <use href="img/sprite/sprite.svg#arrow-right"></use>
-          </svg>
-          <span>
-            Tools
-          </span>
-      </div>
+
         <div class="tools__wrapper">
                 <h7 class="tools__title _med-title">Tools</h7>
       <div class="tools__panel">
         <div class="panel__inner">
           <div class="panel__btn-row">
-            <button class="panel__btn" onclick="showDisplay(event, 'invoice')">
-              <span>
+            <button class="panel__btn" >
+
                 Invoices
-              </span>
+
               <svg width="15" height="17.6">
-                <use href="img/sprite/sprite.svg#arrow-down-black"></use>
+                <use href="img/sprite/sprite.svg#arrow-down"></use>
               </svg>
             </button>
-            <button class="panel__btn" onclick="showDisplay(event, 'exchange')">
-              <span>
+            <button class="panel__btn" >
+
                 Exchange
-              </span>
+
               <svg width="15" height="17.6">
                 <use href="img/sprite/sprite.svg#arrow-down"></use>
               </svg>
             </button>
-            <button class="panel__btn" onclick="showDisplay(event, 'solutions')">
-              <span>
+            <button class="panel__btn" >
+
                 Turnkey Solutions
-              </span>
+
               <svg width="15" height="17.6">
                 <use href="img/sprite/sprite.svg#arrow-down"></use>
               </svg>
             </button>
           </div>
-          <div class="choose-row">
-            <ul class="choose-list">
-              <li>
-                <span class="bullet active-bullet" onclick="showRow(event, 'first-row')"></span>
-              </li>
-              <li>
-                <span class="bullet" onclick="showRow(event, 'sec-row')"></span>
-              </li>
-              <li>
-                <span class="bullet" onclick="showRow(event, 'third-row')"></span>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
-      <div class="tools__inner" id="invoice">
-        <div class="tools__info">
-          <div class="tools__heading">
-            Invoices
-          </div>
-          <div class="tools__descr">
-            <p>
-              Invoices – a method of bill generation where a given cryptocurrency is tied to a specific fiat amount, which the customer has to pay within a short period of time (15 minutes), after which the invoice has to be regenerated with the new exchange rate.
-            </p>
-          </div>
-          <div class="tools__subinfo">
-            <span>
+      <div class="tools__overlay">
+        <div class="tools__wrapper-item">
+          <div class="tools__inner" id="invoice">
+            <div class="tools__info">
+              <div class="tools__heading">
+                Invoices
+              </div>
+              <div class="tools__descr">
+                <p>
+                  Invoices – a method of bill generation where a given cryptocurrency is tied to a specific fiat amount, which the customer has to pay within a short period of time (15 minutes), after which the invoice has to be regenerated with the new exchange rate.
+                </p>
+              </div>
+              <div class="tools__subinfo">
+                <span>
 
-            </span>
-            <p>
-              A flexible tool that allows your customers to pay in crypto and credits your account with the required amount in EUR or other currency.
-            </p>
+                </span>
+                <p>
+                  A flexible tool that allows your customers to pay in crypto and credits your account with the required amount in EUR or other currency.
+                </p>
+              </div>
+            </div>
+            <div class="tools__image">
+              <picture>
+                <source type='image/webp' srcset='img/gambling/gam-image.webp'>
+                <img src='img/gambling/gam-image.png' alt=''>
+              </picture>
+            </div>
           </div>
         </div>
-        <div class="tools__image">
-          <picture>
-            <source type='image/webp' srcset='img/gambling/gam-image.webp'>
-            <img src='img/gambling/gam-image.png' alt=''>
-          </picture>
-        </div>
-      </div>
-      <div class="tools__inner" id="exchange">
-        <div class="tools__info">
-          <div class="tools__heading">
-            Exchange
-          </div>
-          <div class="tools__descr">
-            <p>
-              Exchange – a method of bill generation where a given cryptocurrency is tied to a specific fiat amount, which the customer has to pay within a short period of time (15 minutes), after which the invoice has to be regenerated with the new exchange rate.
-            </p>
-          </div>
-          <div class="tools__subinfo">
-            <span>
+        <div class="tools__wrapper-item">
+          <div class="tools__inner" id="exchange">
+            <div class="tools__info">
+              <div class="tools__heading">
+                Exchange
+              </div>
+              <div class="tools__descr">
+                <p>
+                  Exchange – a method of bill generation where a given cryptocurrency is tied to a specific fiat amount, which the customer has to pay within a short period of time (15 minutes), after which the invoice has to be regenerated with the new exchange rate.
+                </p>
+              </div>
+              <div class="tools__subinfo">
+                <span>
 
-            </span>
-            <p>
-              A flexible tool that allows your customers to pay in crypto and credits your account with the required amount in EUR or other currency.
-            </p>
+                </span>
+                <p>
+                  A flexible tool that allows your customers to pay in crypto and credits your account with the required amount in EUR or other currency.
+                </p>
+              </div>
+            </div>
+            <div class="tools__image">
+              <picture>
+                <source type='image/webp' srcset='img/gambling/gam-image.webp'>
+                <img src='img/gambling/gam-image.png' alt=''>
+              </picture>
+            </div>
           </div>
         </div>
-        <div class="tools__image">
-          <picture>
-            <source type='image/webp' srcset='img/gambling/gam-image.webp'>
-            <img src='img/gambling/gam-image.png' alt=''>
-          </picture>
-        </div>
-      </div>
-      <div class="tools__inner" id="solutions">
-        <div class="tools__info">
-          <div class="tools__heading">
-            Turnkey Solutions
-          </div>
-          <div class="tools__descr">
-            <p>
-              Solutions – a method of bill generation where a given cryptocurrency is tied to a specific fiat amount, which the customer has to pay within a short period of time (15 minutes), after which the invoice has to be regenerated with the new exchange rate.
-            </p>
-          </div>
-          <div class="tools__subinfo">
-            <span>
+        <div class="tools__wrapper-item">
+          <div class="tools__inner" id="solutions">
+            <div class="tools__info">
+              <div class="tools__heading">
+                Turnkey Solutions
+              </div>
+              <div class="tools__descr">
+                <p>
+                  Solutions – a method of bill generation where a given cryptocurrency is tied to a specific fiat amount, which the customer has to pay within a short period of time (15 minutes), after which the invoice has to be regenerated with the new exchange rate.
+                </p>
+              </div>
+              <div class="tools__subinfo">
+                <span>
 
-            </span>
-            <p>
-              A flexible tool that allows your customers to pay in crypto and credits your account with the required amount in EUR or other currency.
-            </p>
+                </span>
+                <p>
+                  A flexible tool that allows your customers to pay in crypto and credits your account with the required amount in EUR or other currency.
+                </p>
+              </div>
+            </div>
+            <div class="tools__image">
+              <picture>
+                <source type='image/webp' srcset='img/gambling/gam-image.webp'>
+                <img src='img/gambling/gam-image.png' alt=''>
+              </picture>
+            </div>
           </div>
-        </div>
-        <div class="tools__image">
-          <picture>
-            <source type='image/webp' srcset='img/gambling/gam-image.webp'>
-            <img src='img/gambling/gam-image.png' alt=''>
-          </picture>
         </div>
       </div>
         </div>
@@ -159,19 +146,7 @@
               We like working with cool CEOs and ambitious projects. Leave your phone number or e-mail and 1 of 4 of our managers will contact you to in detail learn about your project.
 
             </p>
-            <div class="choose-row">
-              <ul class="choose-list">
-                <li>
-                  <span class="bullet active-bullet" onclick="showRow(event, 'first-row')"></span>
-                </li>
-                <li>
-                  <span class="bullet" onclick="showRow(event, 'sec-row')"></span>
-                </li>
-                <li>
-                  <span class="bullet" onclick="showRow(event, 'third-row')"></span>
-                </li>
-              </ul>
-            </div>
+            <div class="media__bullets swiper-pagination" style="position: relative;"></div>
           </div>
           <div class="media-wrapper swiper">
             <div class="media-inner swiper-wrapper">
@@ -306,6 +281,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -321,55 +297,133 @@
           <p>
             We appreciate every opinion on our service and thank each one of you for your trust in Cryptoprocessing.com
           </p>
-          <div class="choose-row">
-            <ul class="choose-list">
-              <li>
-                <span class="bullet active-bullet" ></span>
+          <div class="choose-row ">
+            <ul class="choose-list swiper-pagination" style="position: relative;">
+              <li class="bullet swiper-pagination-bullet">
+                <span class="" ></span>
               </li>
-              <li>
-                <span class="bullet" ></span>
+              <li class="bullet swiper-pagination-bullet">
+                <span class="" ></span>
               </li>
-              <li>
-                <span class="bullet"></span>
+              <li class="bullet swiper-pagination-bullet">
+                <span class=""></span>
               </li>
             </ul>
           </div>
         </div>
-        <div class="customer__inner">
-          <div class="customer__clients-row">
-            <div class="customer__item">
-              <div class="customer__item-inner">
-                <div class="customer__name">
-                  <svg width="50" height="50">
-                    <use href="img/sprite/sprite.svg#auth-icon"></use>
-                  </svg>
-                  <span>
-                    Name of client
-                  </span>
-                </div>
-                <div class="customer__info">
-                  <p>
-                    NOWPayments is extremely easy to integrate into existing websites, and you can even use our donation links to display on your social media accounts. For online stores, we offer custom widgets, buttons, and plugins for every major e-commerce platform in existence! Accepting crypto payments has never been easier, and the best thing is that only several minutes stand between accepting Bitcoin as payment at your online store.
+        <div class="custom__wrapper swiper">
+          <div class="customer__inner swiper-wrapper">
+            <div class="customer__clients-row swiper-slide">
+              <div class="customer__item">
+                <div class="customer__item-inner">
+                  <div class="customer__name">
+                    <svg width="50" height="50">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                    <span>
+                      Name of client
+                    </span>
+                  </div>
+                  <div class="customer__info">
+                    <p>
+                      NOWPayments is extremely easy to integrate into existing websites, and you can even use our donation links to display on your social media accounts. For online stores, we offer custom widgets, buttons, and plugins for every major e-commerce platform in existence! Accepting crypto payments has never been easier, and the best thing is that only several minutes stand between accepting Bitcoin as payment at your online store.
 
-                  </p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="customer__item">
+                <div class="customer__item-inner">
+                  <div class="customer__name">
+                    <svg width="50" height="50">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                    <span>
+                      Name of client
+                    </span>
+                  </div>
+                  <div class="customer__info">
+                    <p>
+                      NOWPayments is extremely easy to integrate into existing websites, and you can even use our donation links to display on your social media accounts. For online stores, we offer custom widgets, buttons, and plugins for every major e-commerce platform in existence! Accepting crypto payments has never been easier, and the best thing is that only several minutes stand between accepting Bitcoin as payment at your online store.
+
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="customer__item">
-              <div class="customer__item-inner">
-                <div class="customer__name">
-                  <svg width="50" height="50">
-                    <use href="img/sprite/sprite.svg#auth-icon"></use>
-                  </svg>
-                  <span>
-                    Name of client
-                  </span>
-                </div>
-                <div class="customer__info">
-                  <p>
-                    NOWPayments is extremely easy to integrate into existing websites, and you can even use our donation links to display on your social media accounts. For online stores, we offer custom widgets, buttons, and plugins for every major e-commerce platform in existence! Accepting crypto payments has never been easier, and the best thing is that only several minutes stand between accepting Bitcoin as payment at your online store.
+            <div class="customer__clients-row swiper-slide">
+              <div class="customer__item">
+                <div class="customer__item-inner">
+                  <div class="customer__name">
+                    <svg width="50" height="50">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                    <span>
+                      Name of client
+                    </span>
+                  </div>
+                  <div class="customer__info">
+                    <p>
+                      NOWPayments is extremely easy to integrate into existing websites, and you can even use our donation links to display on your social media accounts. For online stores, we offer custom widgets, buttons, and plugins for every major e-commerce platform in existence! Accepting crypto payments has never been easier, and the best thing is that only several minutes stand between accepting Bitcoin as payment at your online store.
 
-                  </p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="customer__item">
+                <div class="customer__item-inner">
+                  <div class="customer__name">
+                    <svg width="50" height="50">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                    <span>
+                      Name of client
+                    </span>
+                  </div>
+                  <div class="customer__info">
+                    <p>
+                      NOWPayments is extremely easy to integrate into existing websites, and you can even use our donation links to display on your social media accounts. For online stores, we offer custom widgets, buttons, and plugins for every major e-commerce platform in existence! Accepting crypto payments has never been easier, and the best thing is that only several minutes stand between accepting Bitcoin as payment at your online store.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="customer__clients-row swiper-slide">
+              <div class="customer__item">
+                <div class="customer__item-inner">
+                  <div class="customer__name">
+                    <svg width="50" height="50">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                    <span>
+                      Name of client
+                    </span>
+                  </div>
+                  <div class="customer__info">
+                    <p>
+                      NOWPayments is extremely easy to integrate into existing websites, and you can even use our donation links to display on your social media accounts. For online stores, we offer custom widgets, buttons, and plugins for every major e-commerce platform in existence! Accepting crypto payments has never been easier, and the best thing is that only several minutes stand between accepting Bitcoin as payment at your online store.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="customer__item">
+                <div class="customer__item-inner">
+                  <div class="customer__name">
+                    <svg width="50" height="50">
+                      <use href="img/sprite/sprite.svg#auth-icon"></use>
+                    </svg>
+                    <span>
+                      Name of client
+                    </span>
+                  </div>
+                  <div class="customer__info">
+                    <p>
+                      NOWPayments is extremely easy to integrate into existing websites, and you can even use our donation links to display on your social media accounts. For online stores, we offer custom widgets, buttons, and plugins for every major e-commerce platform in existence! Accepting crypto payments has never been easier, and the best thing is that only several minutes stand between accepting Bitcoin as payment at your online store.
+
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -385,6 +439,8 @@
 
 
   @@include('_footer.html',{})
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/breadcrumbs.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/tabs.js"></script>
   <script src="js/burger.js"></script>
