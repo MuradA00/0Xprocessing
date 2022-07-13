@@ -19,9 +19,17 @@
           height: 50px;
         }
       }
+      @include max-w(23.75em) {
+        flex-direction: column;
+        text-align: center;
+        svg {
+          width: 60px;
+          height: 60px;
+        }
+      }
       p {
         color: var(--white-clr);
-        font-size: clamp(.85rem, 1.125rem, 1.125vw);
+        font-size: clamp(1rem, 1.125rem, 1.125vw);
       }
       border-radius: 2rem;
       padding: 25px clamp(25px, 3.125rem, 3.125vw);
