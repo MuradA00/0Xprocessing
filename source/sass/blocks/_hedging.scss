@@ -1,6 +1,7 @@
 .hedging {
   padding-top: clamp(5rem, 7.5vw, 7.5rem);
   &__inner {
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr .457fr;
   }
